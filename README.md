@@ -3,21 +3,21 @@
 ### Prerequisites
 
 * A GitHub account
-* A [TravisCI](https://docs.travis-ci.com) account 
+* A [TravisCI](https://docs.travis-ci.com) account
 * A [Docker hub](https://hub.docker.com) account
 * Local Docker installation
 
 
 ### Instructions
 
-**Your `codeName = thedoctor`** - Use it throughout the task.  
-We've found a data leak in our company, but before we're deleting our resources, we need you to extract the information and deliver it.  
-You're assigned with the creation of a device that will be used as a POC to transfer highly sensitive data.  
-With the language of your choice follow these instructions in the next 72 hours to stop the leak:  
+**Your `codeName = thedoctor`** - Use it throughout the task.
+We've found a data leak in our company, but before we're deleting our resources, we need you to extract the information and deliver it.
+You're assigned with the creation of a device that will be used as a POC to transfer highly sensitive data.
+With the language of your choice follow these instructions in the next 72 hours to stop the leak:
 
 1. Clone this project, change its name and restructure it as you see fit, create your own GitHub repo with the code
-2. Write an application that will extract the secret string from a DynamoDB table in our account  
-3. The `secret_code` lies in a DynamoDB table `devops-challenge` where `code_name = #{codeName}` 
+2. Write an application that will extract the secret string from a DynamoDB table in our account
+3. The `secret_code` lies in a DynamoDB table `devops-challenge` where `code_name = #{codeName}`
 4. The keys that will provide access to the account have been provided separatly, **DO NOT COMMIT THEM**, if the keys are exposed to GitHub, we will be notified and you will be disqualified
 5. Create a docker container that will publish `secret_code` to `http://127.0.0.1:5000/secret`
 6. Create a [Travis CI](https://travis-ci.org/) account, and add a `.travis.yml` that will build, test and deploy your code and container/s
@@ -34,10 +34,10 @@ Attached: `.env` (if you used one)
 ```
 
 #### Bonus - This is not a must
-> To wrap up the project, prepare a `environment.template` file, that would contain a CloudFormation YAML.  
-> The template should create an environment ready to deploy your application to AWS.  
-> You may choose any AWS service you see fit for the deployment.  
-> When using the template in CloudFormation, the user should be able to fill in parameters required (e.g `vpc-id`, `instance-type` etc).  
+> To wrap up the project, prepare a `environment.template` file, that would contain a CloudFormation YAML.
+> The template should create an environment ready to deploy your application to AWS.
+> You may choose any AWS service you see fit for the deployment.
+> When using the template in CloudFormation, the user should be able to fill in parameters required (e.g `vpc-id`, `instance-type` etc).
 
 ---
 
@@ -65,5 +65,5 @@ Attached: `.env` (if you used one)
 ---
 
 ```
-omer@devops.co.il
+omer@prodops.io
 ```
