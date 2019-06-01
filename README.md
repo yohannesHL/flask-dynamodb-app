@@ -3,7 +3,6 @@
 ### Prerequisites
 
 * A GitHub account
-* A [TravisCI](https://docs.travis-ci.com) account
 * A [Docker hub](https://hub.docker.com) account
 * Local Docker installation
 
@@ -20,8 +19,8 @@ With the language of your choice follow these instructions in the next 72 hours 
 3. The `secret_code` lies in a DynamoDB table `devops-challenge` where `code_name = #{codeName}`
 4. The keys that will provide access to the account have been provided separatly, **DO NOT COMMIT THEM**, if the keys are exposed to GitHub, we will be notified and you will be disqualified
 5. Create a docker container that will publish `secret_code` to `http://127.0.0.1:5000/secret`
-6. Create a [Travis CI](https://travis-ci.org/) account, and add a `.travis.yml` that will build, test and deploy your code and container/s
-7. The Travis process should `publish` the contianer to your own docker hub account
+6. Create a [Drone CI](https://Drone.io) account, and add a `.drone.yml` that will build, test and deploy your code and container/s
+7. The Drone process should `publish` the contianer to your own docker hub account
 8. A link to the container on docker hub should be published as `container` to `/health` (See requirement #2)
 9. A link to the GitHub project should be published as `project` to `/health` (See requirement #2)
 10. Once completed, reply to the challenge email:
@@ -47,7 +46,7 @@ Attached: `.env` (if you used one)
 2. Return `{ status: healthy, container: <LINK_TO_HUB>, project: github.com/omerxx/ecscale }` to http://127.0.0.1:5000/health
 3. Running `docker-compose up` should get everything up and running
 4. Contain a minimal test suit
-5. Be tested and built in Travis on push to `master` branch
+5. Be tested and built in Drone on push to `master` branch
 6. Contain a well documented code, and a `SUMMARY.md` file explaining each step of the development process
 7. Contain a `TROUBLE.md` describing difficulties along the way and their solutions
 8. Contain a `INSTRCUTIONS.md` explaining a cloning user how to use the repo - running, testing etc.
