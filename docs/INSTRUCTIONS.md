@@ -64,3 +64,28 @@ FLASK_APP=app/main.py flask run
   ```
 
 
+## Deployment
+
+### Application deployment
+The application is currently deployed to docker hub.
+
+This is automatically handled by the CI pipeline everytime `git push` is run.
+
+
+### Infrastructure deployment
+AWS CDK is used to define and deploy infrastructure as code (IaC).
+- First install [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
+- Ensure you have your AWS credentials configured as cdk will use those settings: `aws configure`
+- Install the aws cdk python dependencies: `pipenv install`
+- Generate a Cloud formation template(this will also catch any issues with the definitions):
+  ```
+  cdk synth
+  ```
+- Compare current stack against local changes :
+  ```
+  cdk diff
+  ```
+- When ready to deploy:
+  ```
+  cdk deploy
+  ```
