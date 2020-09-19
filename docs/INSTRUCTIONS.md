@@ -1,6 +1,13 @@
 # Instructions
 
+## Prerequisites
+
+- Docker
+- Docker Compose
+- `.env` file (see environment.template)
+
 ## Installation
+
 
 ### With docker compose
 
@@ -32,6 +39,7 @@ pipenv shell
 ## Running
 
 Running the app will start up the flask server on `http://localhost:5000`.
+The app requires `.env ` to be present. See `environment.template` for detail on what it should contain.
 
 ### With docker compose (dev)
 
