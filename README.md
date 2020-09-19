@@ -12,7 +12,7 @@ This project runs a flask-dynamodb app in docker container.
 - `.env` file (see environment.template)
 
 ## Instructions
-* [Instructions](/instructions)
+* [Instructions](docs/INSTRUCTIONS.md)
 
 
 ## Development process
