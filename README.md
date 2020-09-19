@@ -1,68 +1,46 @@
-# Welcome to the DevOps challenge
 
-### Prerequisites
+# Getting started
 
-* A GitHub account
-* A [Docker hub](https://hub.docker.com) account
-* Local Docker installation
+This project runs a flask-dynamodb app in docker container.
 
+## Requirements
+* Docker
+* Docker Compose
+* `.env` file (see environment.template)
 
-### Instructions
+## Installation
 
-**Your `codeName = thedoctor`** - Use it throughout the task.
-We've found a data leak in our company, but before we're deleting our resources, we need you to extract the information and deliver it.
-You're assigned with the creation of a device that will be used as a POC to transfer highly sensitive data.
-With the language of your choice follow these instructions in the next 72 hours to stop the leak:
+### With docker compose
+To build the image on you local machine :
+ `docker-compose build`
 
-1. Clone this project, change its name and restructure it as you see fit, create your own GitHub repo with the code
-2. Write an application that will extract the secret string from a DynamoDB table in our account
-3. The `secret_code` lies in a DynamoDB table `devops-challenge` where `code_name = #{codeName}`
-4. The keys that will provide access to the account have been provided separatly, **DO NOT COMMIT THEM**, if the keys are exposed to GitHub, we will be notified and you will be disqualified
-5. Create a docker container that will publish `secret_code` to `http://127.0.0.1:5000/secret`
-6. Create a [Drone CI](https://Drone.io) account, and add a `.drone.yml` that will build, test and deploy your code and container/s
-7. The Drone process should `publish` the contianer to your own docker hub account
-8. A link to the container on docker hub should be published as `container` to `/health` (See requirement #2)
-9. A link to the GitHub project should be published as `project` to `/health` (See requirement #2)
-10. Once completed, reply to the challenge email:
-```
-Subject: DevOps Challenge complete
-Content: Name:      <YOUR_NAME>
-         Project:   <LINK TO GITHUB PROJECT>
-Attached: `.env` (if you used one)
+### Locally
+Alternativly it is possible to run the app without docker (not recomended).
+You'll need `pipenv` installed on your machine.
 
-```
+Then install package via: `pipenv install` on the root folder.
 
-#### Bonus - This is not a must
-> To wrap up the project, prepare a `environment.template` file, that would contain a CloudFormation YAML.
-> The template should create an environment ready to deploy your application to AWS.
-> You may choose any AWS service you see fit for the deployment.
-> When using the template in CloudFormation, the user should be able to fill in parameters required (e.g `vpc-id`, `instance-type` etc).
+## Running
+Its best to use the supplied docker compose config.
 
----
+Run `docker-compose up`
 
-### The result should
+### With docker compose (dev)
 
-1. Return `{ secret_code: <CODE> }` to http://127.0.0.1:5000/secret
-2. Return `{ status: healthy, container: <LINK_TO_HUB>, project: github.com/omerxx/ecscale }` to http://127.0.0.1:5000/health
-3. Running `docker-compose up` should get everything up and running
-4. Contain a minimal test suit
-5. Be tested and built in Drone on push to `master` branch
-6. Contain a well documented code, and a `SUMMARY.md` file explaining each step of the development process
-7. Contain a `TROUBLE.md` describing difficulties along the way and their solutions
-8. Contain a `INSTRCUTIONS.md` explaining a cloning user how to use the repo - running, testing etc.
-9. Be published as a GitHub project under your account e.g `github.com/<GitHub_User>/<Challange_Project>`
-10. `verification.sh` should run instantly, if you used a `.env` file, share it privately in the returning email
+ * `docker-compose up --build`
+
+### Locally
+* `flask run main:app`
+
+## Testing
+* `pytest` in the project root.
+
+# CI/CD 
+
+We are using github actions to run CI/CD tasks. The task definitions are defined in `.github/workflows/` folder. Definitions consist of a yml configuration outlining build steps. 
+Currently there is a task that deploys the docker image to docker hub.
+
+Currently there is on task which is run on each push to the repo: 
+* `docker-image.yml` - Build docker image and Push to Docker Hub
 
 
-### Guidance (These are only for general assitance and are not a must):
-
-1. Use informative commit messages
-2. Think *security*: Avoid exposing secrets in any way (Tip: use `.env` file for the `compose`ing, and `.gitignore` it. Be sure to provide the file upon completing the task.
-3. Different routers in [Ruby](https://github.com/sinatra/sinatra), [Python](http://flask.pocoo.org/), [Go](https://golang.org/pkg/net/http/) and [Node](https://www.npmjs.com/package/http-server)
-4. Structure the project in a maintainable logic way, you may use `/example`
-5. Use the `example/screenshots/` for a general idea of the outcome
----
-
-```
-omer@prodops.io
-```

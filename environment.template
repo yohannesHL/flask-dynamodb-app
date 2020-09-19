@@ -1,0 +1,6 @@
+CONTAINER_URL=https://hub.docker.com/r/yohanhl/flask-dynamodb-app/
+PROJECT_URL=https://github.com/yohanneshl/flask-dynamodb-app
+TABLE_NAME=mytable
+AWS_REGION=<aws-region>
+AWS_KEY=<aws-access-key>
+AWS_SECRET=<aws-secret-key>
