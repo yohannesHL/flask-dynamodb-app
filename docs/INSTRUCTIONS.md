@@ -42,12 +42,12 @@ docker-compose up --build
 ### Locally
 
 ```
-flask run main:app
+FLASK_APP=app/main.py flask run
 ```
 
 ## Testing
 
-- Ensure the environement is activated first.
+- Ensure the environement is activated first: `pipenv shell`.
 
 - `cd` to in the project root.
 - 
