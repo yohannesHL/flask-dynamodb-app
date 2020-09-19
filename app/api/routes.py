@@ -18,4 +18,4 @@ def get_secret():
         raise Exception('table not found')
 
     result = table.get_item(Key={'code_name': 'thedoctor'})
-    return jsonify(result.get('Item'))
+    return jsonify(secret_code=result.get('Item'))

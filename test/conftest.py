@@ -13,8 +13,10 @@ class MockTable():
     def get_item(self, Key=None):
         return {
             'Item': {
-                'code_name': 'thedoctor',
-                'secret_code': 'j37ACF8aHLb38JN3'
+                'secret_code': {
+                    'code_name': 'thedoctor',
+                    'secret_code': 'j37ACF8aHLb38JN3'
+                }
             }
         }
 

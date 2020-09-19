@@ -14,7 +14,12 @@ def test_api_get_health(client):
 
 def test_api_get_secret(client):
 
-    expected = {'code_name': 'thedoctor', 'secret_code': 'j37ACF8aHLb38JN3'}
+    expected = {
+        'secret_code': {
+            'code_name': 'thedoctor',
+            'secret_code': 'j37ACF8aHLb38JN3'
+        }
+    }
     res = client.get('/secret')
     assert res.json == expected
 
