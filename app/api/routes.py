@@ -1,6 +1,6 @@
 from flask import (Blueprint, current_app, jsonify)
 
-api = Blueprint('example_api', __name__, url_prefix='/')
+api = Blueprint('api', __name__, url_prefix='/')
 
 
 @api.route('/health', methods=('GET', ))

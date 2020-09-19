@@ -15,3 +15,14 @@ def get_dynamodb(aws_region, aws_access_key, aws_secret_key):
                           region_name=aws_region,
                           aws_access_key_id=aws_access_key,
                           aws_secret_access_key=aws_secret_key)
+
+
+def init_db(resource, app):
+    '''Initialise the db .
+    Args:
+        resource (boto3.resources.base.ServiceResource): A dynamodb resource
+        app (flask.Flask): The flask application instance
+    '''
+
+    app.tables = dict(
+        devops_challenge=resource.Table(app.config.get('TABLE_NAME')))

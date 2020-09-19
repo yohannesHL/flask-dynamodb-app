@@ -16,4 +16,6 @@ COPY app /app/
 
 EXPOSE 5000
 
-ENTRYPOINT gunicorn -b :5000 main:app
+WORKDIR /
+
+ENTRYPOINT gunicorn -b :5000 app.main:app
