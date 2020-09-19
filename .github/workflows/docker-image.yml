@@ -16,6 +16,6 @@ jobs:
         uses: docker/build-push-action@v1.1.1
         with:
           push: true
-          dockerfile: ./example/Dockerfile
+          dockerfile: ./Dockerfile
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
