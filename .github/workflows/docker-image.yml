@@ -17,5 +17,6 @@ jobs:
         with:
           push: true
           dockerfile: ./Dockerfile
+          repository: yohanhl/flask-dynamodb-app
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
