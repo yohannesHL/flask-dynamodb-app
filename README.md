@@ -29,7 +29,7 @@ The service will be available on `http://localhost:5000`
     {
         "secret_code": {
             "code_name": "thedoctor"
-            "secret_code": "oh"
+            "secret_code": "j37ACF8aHLb38JN3"
         }
     }
     ```
