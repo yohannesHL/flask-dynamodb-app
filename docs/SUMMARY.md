@@ -19,3 +19,11 @@
 
 1. Test/Debug CI/CD task until it works
 
+1. Create IaC configuration to deploy the infrastructure
+
+1. Update, Test and deploy infrastructure code
+
+1. Make manual adjustments to the deployed service (if necessary)
+1. Inspect the deployed service
+
+

@@ -1,0 +1,600 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "aws-ec2-dynamodb": {
+        "id": "aws-ec2-dynamodb",
+        "path": "aws-ec2-dynamodb",
+        "children": {
+          "TheVPC": {
+            "id": "TheVPC",
+            "path": "aws-ec2-dynamodb/TheVPC",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "aws-ec2-dynamodb/TheVPC/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "aws-ec2-dynamodb/TheVPC"
+                      }
+                    ]
+                  }
+                }
+              },
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/17",
+                        "vpcId": {
+                          "Ref": "TheVPC92636AB0"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "aws-ec2-dynamodb/TheVPC/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet1/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "TheVPC92636AB0"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "aws-ec2-dynamodb/TheVPC/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "TheVPCPublicSubnet1RouteTable17DA183D"
+                        },
+                        "subnetId": {
+                          "Ref": "TheVPCPublicSubnet1Subnet770D4FF2"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "TheVPCPublicSubnet1RouteTable17DA183D"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "TheVPCIGWFA25CC08"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.128.0/17",
+                        "vpcId": {
+                          "Ref": "TheVPC92636AB0"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "aws-ec2-dynamodb/TheVPC/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet2/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "TheVPC92636AB0"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "aws-ec2-dynamodb/TheVPC/PublicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "TheVPCPublicSubnet2RouteTable3609F42C"
+                        },
+                        "subnetId": {
+                          "Ref": "TheVPCPublicSubnet2Subnet73F96DA9"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "aws-ec2-dynamodb/TheVPC/PublicSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "TheVPCPublicSubnet2RouteTable3609F42C"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "TheVPCIGWFA25CC08"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "IGW": {
+                "id": "IGW",
+                "path": "aws-ec2-dynamodb/TheVPC/IGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "aws-ec2-dynamodb/TheVPC"
+                      }
+                    ]
+                  }
+                }
+              },
+              "VPCGW": {
+                "id": "VPCGW",
+                "path": "aws-ec2-dynamodb/TheVPC/VPCGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "vpcId": {
+                      "Ref": "TheVPC92636AB0"
+                    },
+                    "internetGatewayId": {
+                      "Ref": "TheVPCIGWFA25CC08"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "vpcid": {
+            "id": "vpcid",
+            "path": "aws-ec2-dynamodb/vpcid"
+          },
+          "InstanceSSM": {
+            "id": "InstanceSSM",
+            "path": "aws-ec2-dynamodb/InstanceSSM",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "aws-ec2-dynamodb/InstanceSSM/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "ec2.",
+                                  {
+                                    "Ref": "AWS::URLSuffix"
+                                  }
+                                ]
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "managedPolicyArns": [
+                      {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "arn:",
+                            {
+                              "Ref": "AWS::Partition"
+                            },
+                            ":iam::aws:policy/service-role/AmazonEC2RoleforSSM"
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "aws-ec2-dynamodb/InstanceSSM/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "aws-ec2-dynamodb/InstanceSSM/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:GetObject*",
+                                "s3:GetBucket*",
+                                "s3:List*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":s3:::demo-secrets"
+                                    ]
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":s3:::demo-secrets/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": [
+                                "s3:GetObject*",
+                                "s3:GetBucket*",
+                                "s3:List*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":s3:::demo-secrets"
+                                    ]
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":s3:::demo-secrets/.env"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": [
+                                "cloudformation:DescribeStackResource",
+                                "cloudformation:SignalResource"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Ref": "AWS::StackId"
+                              }
+                            },
+                            {
+                              "Action": "dynamodb:GetItem",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "TheTable41DEE1DC",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "InstanceSSMDefaultPolicy6E4EFE93",
+                        "roles": [
+                          {
+                            "Ref": "InstanceSSMCBFA3CF0"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "TheSecretsBucket": {
+            "id": "TheSecretsBucket",
+            "path": "aws-ec2-dynamodb/TheSecretsBucket"
+          },
+          "Instance": {
+            "id": "Instance",
+            "path": "aws-ec2-dynamodb/Instance",
+            "children": {
+              "InstanceSecurityGroup": {
+                "id": "InstanceSecurityGroup",
+                "path": "aws-ec2-dynamodb/Instance/InstanceSecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "aws-ec2-dynamodb/Instance/InstanceSecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "aws-ec2-dynamodb/Instance/InstanceSecurityGroup",
+                        "securityGroupEgress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "description": "Allow all outbound traffic by default",
+                            "ipProtocol": "-1"
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "aws-ec2-dynamodb/Instance"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "TheVPC92636AB0"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "InstanceProfile": {
+                "id": "InstanceProfile",
+                "path": "aws-ec2-dynamodb/Instance/InstanceProfile",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                  "aws:cdk:cloudformation:props": {
+                    "roles": [
+                      {
+                        "Ref": "InstanceSSMCBFA3CF0"
+                      }
+                    ]
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "aws-ec2-dynamodb/Instance/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::Instance",
+                  "aws:cdk:cloudformation:props": {
+                    "availabilityZone": {
+                      "Fn::Select": [
+                        0,
+                        {
+                          "Fn::GetAZs": ""
+                        }
+                      ]
+                    },
+                    "iamInstanceProfile": {
+                      "Ref": "InstanceInstanceProfileAB5AEF02"
+                    },
+                    "imageId": {
+                      "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+                    },
+                    "instanceType": "t3.nano",
+                    "securityGroupIds": [
+                      {
+                        "Fn::GetAtt": [
+                          "InstanceInstanceSecurityGroupF0E2D5BE",
+                          "GroupId"
+                        ]
+                      }
+                    ],
+                    "subnetId": {
+                      "Ref": "TheVPCPublicSubnet1Subnet770D4FF2"
+                    },
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "aws-ec2-dynamodb/Instance"
+                      }
+                    ],
+                    "userData": {
+                      "Fn::Base64": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "#!/bin/bash\n#!/bin/sh\n\nyum install docker -y\n\n# makes a directory\nmkdir /appdata\nmount -t efs fs-d48c7f8c:/ /appdata\n\n\n# enable and start docker\nsystemctl enable docker\nsystemctl start docker\n\n# bootstraps \"docker compose\"\ncurl -L \"https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose\nchmod +x /usr/local/bin/docker-compose\nln -s /usr/local/bin/docker-compose /usr/bin/docker-compose\nusermod -aG docker ec2-user\n\ndocker pull docker pull yohanhl/flask-dynamodb-app\n\n# Heredoc for a docker-compose.yaml file\ncat << 'EOF' > /app/docker-compose.yaml\nversion: '3'\nservices:\n  app:\n    image: yohanhl/flask-dynamodb-app\n    ports:\n      - 8080:5000\n    restart: always\n    env_file: .env\nEOF\n\ncd /app\ndocker-compose up\n# fingerprint: 69d18f7c1ce6863d\n(\n  set +e\n  /opt/aws/bin/cfn-init -v --region ",
+                            {
+                              "Ref": "AWS::Region"
+                            },
+                            " --stack ",
+                            {
+                              "Ref": "AWS::StackName"
+                            },
+                            " --resource InstanceC1063A87 -c default\n  /opt/aws/bin/cfn-signal -e $? --region ",
+                            {
+                              "Ref": "AWS::Region"
+                            },
+                            " --stack ",
+                            {
+                              "Ref": "AWS::StackName"
+                            },
+                            " --resource InstanceC1063A87\n  cat /var/log/cfn-init.log >&2\n)"
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "aws-ec2-dynamodb/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
+          },
+          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118": {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "aws-ec2-dynamodb/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118"
+          },
+          "TheTable": {
+            "id": "TheTable",
+            "path": "aws-ec2-dynamodb/TheTable",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "aws-ec2-dynamodb/TheTable/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "code_name",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "code_name",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5
+                    },
+                    "tableName": "devops_challenge"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "aws-ec2-dynamodb/TheTable/ScalingRole"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

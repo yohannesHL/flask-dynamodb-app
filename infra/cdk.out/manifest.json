@@ -1,0 +1,443 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "aws-ec2-dynamodb": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "aws-ec2-dynamodb.template.json"
+      },
+      "metadata": {
+        "/aws-ec2-dynamodb/TheVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPC92636AB0",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:345:25)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1Subnet770D4FF2",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:640:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:797:9)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:554:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:538:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:534:18)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:366:14)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1RouteTable17DA183D",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:655:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:797:9)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:554:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:538:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:534:18)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:366:14)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1RouteTableAssociationE5186D77",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:660:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:797:9)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:554:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:538:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:534:18)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:366:14)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1DefaultRoute6D26543F",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:687:23)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:378:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:377:32)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2Subnet73F96DA9",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:640:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:797:9)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:554:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:538:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:534:18)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:366:14)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2RouteTable3609F42C",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:655:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:797:9)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:554:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:538:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:534:18)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:366:14)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2RouteTableAssociationB4B0A733",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:660:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:797:9)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:554:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:538:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:534:18)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:366:14)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2DefaultRouteFEB062B2",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:687:23)",
+              "/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:378:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:377:32)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCIGWFA25CC08",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:370:25)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCVPCGWC9B93E30",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:373:25)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/vpcid": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcid",
+            "trace": [
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/InstanceSSM/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceSSMCBFA3CF0",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-iam/lib/role.js:44:22)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/InstanceSSM/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceSSMDefaultPolicy6E4EFE93",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-iam/lib/policy.js:42:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-iam/lib/role.js:173:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-iam/lib/grant.js:82:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-iam/lib/grant.js:39:30)",
+              "Import.grant (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-s3/lib/bucket.js:289:31)",
+              "Import.grantRead (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-s3/lib/bucket.js:188:21)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7756:51",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7756:25",
+              "Kernel._ensureSync (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8393:20)",
+              "Kernel.invoke (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7755:26)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/Instance/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceInstanceSecurityGroupF0E2D5BE",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:174:30)",
+              "new Instance (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/instance.js:31:34)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceInstanceProfileAB5AEF02",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/instance.js:43:28)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceC1063A87",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/instance.js:78:25)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:131:15)",
+              "Function.valueForTypedStringParameter (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:198:21)",
+              "AmazonLinuxImage.getImage (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/machine-image.js:156:41)",
+              "new Instance (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-ec2/lib/instance.js:47:48)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "TheTable41DEE1DC"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/core/lib/construct-compat.js:312:62)",
+              "new Table (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:330:23)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ],
+        "/aws-ec2-dynamodb/TheTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheTable41DEE1DC",
+            "trace": [
+              "new Table (/tmp/jsii-kernel-SRiWmN/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:305:22)",
+              "/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/home/jb/.local/share/virtualenvs/infra-TwSUnMio/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:458:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cloud-assembly-schema": "1.63.0",
+      "@aws-cdk/cx-api": "1.63.0",
+      "@aws-cdk/core": "1.63.0",
+      "@aws-cdk/region-info": "1.63.0",
+      "@aws-cdk/aws-iam": "1.63.0",
+      "@aws-cdk/assets": "1.63.0",
+      "@aws-cdk/aws-cloudwatch": "1.63.0",
+      "@aws-cdk/aws-kms": "1.63.0",
+      "@aws-cdk/aws-events": "1.63.0",
+      "@aws-cdk/aws-s3": "1.63.0",
+      "@aws-cdk/aws-s3-assets": "1.63.0",
+      "@aws-cdk/aws-logs": "1.63.0",
+      "@aws-cdk/aws-ssm": "1.63.0",
+      "@aws-cdk/aws-ec2": "1.63.0",
+      "@aws-cdk/aws-autoscaling-common": "1.63.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.63.0",
+      "@aws-cdk/aws-codeguruprofiler": "1.63.0",
+      "@aws-cdk/aws-efs": "1.63.0",
+      "@aws-cdk/aws-sqs": "1.63.0",
+      "@aws-cdk/aws-lambda": "1.63.0",
+      "@aws-cdk/aws-sns": "1.63.0",
+      "@aws-cdk/aws-cloudformation": "1.63.0",
+      "@aws-cdk/custom-resources": "1.63.0",
+      "@aws-cdk/aws-dynamodb": "1.63.0",
+      "jsii-runtime": "Python/3.8.2"
+    }
+  }
+}
